@@ -11,11 +11,17 @@ Built using Golang, this tool is efficient and easy to use, making it essential 
 - **Colorful Console Output**: Provides colorful feedback in the terminal for a better user experience.
 - **Silent Mode**: Perform scans quietly without additional console output.
 
+## Direct Installation
+
+```bash
+go install -v github.com/Abhinandan-Khurana/go-fetch-secrets@latest
+```
+
 ## Installation
 
 ```bash
 git clone https://github.com/Abhinandan-Khurana/go-fetch-secrets.git
-cd go-Fetch-Secrets
+cd go-fetch-secrets
 go build
 ```
 
