@@ -67,7 +67,7 @@ type JSONOutput struct {
 	Type     string        `json:"type"`
 	Data     string        `json:"data"`
 	URL      string        `json:"url"`
-	Duration time.Duration `json:"duration"`
+	Duration time.Duration `json:"duration(in ns)"`
 }
 
 // JSON formatter
@@ -79,7 +79,7 @@ func (f JSONFormatter) FormatResult(result Result) string {
 		Type     string        `json:"type"`
 		Data     string        `json:"data"`
 		URL      string        `json:"url"`
-		Duration time.Duration `json:"duration"`
+		Duration time.Duration `json:"duration(in ns)"`
 	}{
 		Type:     result.Type,
 		Data:     result.Data,
