@@ -95,10 +95,6 @@
 
   "azure_connection_string": "DefaultEndpointsProtocol=https;AccountName=[a-z0-9]+;AccountKey=[A-Za-z0-9+/=]{88};EndpointSuffix=core\\.windows\\.net",
 
-  "discord_client_secret": "[\\w-]{32}",
-
-  "discord_bot_token": "[MN][A-Za-z\\d]{23}\\.[\\w-]{6}\\.[\\w-]{27}",
-
   "shopify_access_token": "shpat_[a-fA-F0-9]{32}",
 
   "shopify_custom_token": "shpca_[a-fA-F0-9]{32}",
@@ -116,8 +112,6 @@
   "aws_organization_id": "o-[a-z0-9]{10,32}",
 
   "amazon_aws_access_key_id": "AKIA[0-9A-Z]{16}",
-
-  "amazon_aws_secret_key": "[A-Za-z0-9/+=]{40}",
 
   "amazonaws_url_2": "[a-zA-Z0-9-]{1,63}\\.s3\\.amazonaws\\.com|s3://[a-zA-Z0-9-]{1,63}",
 
