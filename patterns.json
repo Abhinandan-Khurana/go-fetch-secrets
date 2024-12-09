@@ -39,10 +39,6 @@
 
   "twilio_api_key": "SK[0-9a-fA-F]{32}",
 
-  "twilio_account_sid": "AC[a-zA-Z0-9]{32}",
-
-  "twilio_app_sid": "AP[a-zA-Z0-9]{32}",
-
   "paypal_braintree_access_token": "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}",
 
   "square_oauth_secret": "sq0csp-[0-9A-Za-z\\-_]{43}",
@@ -58,8 +54,6 @@
   "github_app_token": "ghu_[0-9a-zA-Z]{36}",
 
   "github_refresh_token": "ghr_[0-9a-zA-Z]{36}",
-
-  "github_oauth": "[0-9a-fA-F]{40}",
 
   "rsa_private_key": "-----BEGIN(?:[\\s]+RSA)?[\\s]+PRIVATE[\\s]+KEY-----[\\s]*(?:[0-9A-Za-z+/\\s]*=[\\s]*)*",
 
@@ -104,8 +98,6 @@
   "shopify_shared_secret": "shpss_[a-fA-F0-9]{32}",
 
   "ethereum_address": "0x[a-fA-F0-9]{40}",
-
-  "bitcoin_address": "(?:bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}",
 
   "gitlab_pat": "glpat-[0-9a-zA-Z\\-]{20}",
 
