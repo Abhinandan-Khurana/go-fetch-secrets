@@ -101,8 +101,6 @@
 
   "gitlab_pat": "glpat-[0-9a-zA-Z\\-]{20}",
 
-  "aws_organization_id": "o-[a-z0-9]{10,32}",
-
   "amazon_aws_access_key_id": "AKIA[0-9A-Z]{16}",
 
   "amazonaws_url_2": "[a-zA-Z0-9-]{1,63}\\.s3\\.amazonaws\\.com|s3://[a-zA-Z0-9-]{1,63}",
@@ -122,8 +120,6 @@
   "generic_api_key": "[a|A][p|P][i|I][_]?[k|K][e|E][y|Y][_]?[a-zA-Z0-9]{16,64}",
 
   "generic_secret": "[s|S][e|E][c|C][r|R][e|E][t|T][_]?[k|K][e|E][y|Y][_]?[a-zA-Z0-9]{16,64}",
-
-  "jenkins_cred": "\\$\\{[a-zA-Z0-9_]+\\}|\\$[a-zA-Z0-9_]+",
 
   "artifactory_api_key": "AKC[a-zA-Z0-9]{10,}"
 }
