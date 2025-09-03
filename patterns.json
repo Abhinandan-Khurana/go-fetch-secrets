@@ -1,115 +1,156 @@
 {
   "slack_token": "xox(?:a|b|p|o|r|s)-(?:[0-9]{10,12})-(?:[0-9]{10,12})-(?:[0-9]{10,12})-(?:[a-f0-9]{32})",
-
   "slack_webhook": "https://hooks\\.slack\\.com/services/T[A-Z0-9]{8,11}/B[A-Z0-9]{8,11}/[A-Za-z0-9/]{24}",
-
   "facebook_access_token": "EAACEdEose0cBA[0-9A-Za-z]{60,}",
-
   "heroku_api": "(?i)(?:heroku)\\s*[:'\"\\s]+[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
-
   "mailgun_api": "key-[0-9a-zA-Z]{32}",
-
   "mailchimp_api": "[0-9a-f]{32}-us[1-2][0-9]?",
-
   "picatic_api": "sk_live_[0-9a-z]{32}",
-
   "google_oauth_id": "[0-9]{12}-[0-9a-z]{32}\\.apps\\.googleusercontent\\.com",
-
   "google_api": "AIza[0-9A-Za-z\\-_]{35}",
-
   "amazon_mws_auth_token": "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
-
   "amazonaws_url_1": "(?!-)[a-zA-Z0-9-]{1,63}(?<!-)\\.s3[.-](?:amazonaws\\.com|(?:us|ap|ca|eu|sa)-[a-z]{2}-[0-9]{1}\\.amazonaws\\.com)",
-
   "authorization_basic": "Basic\\s[a-zA-Z0-9+/]+={0,2}",
-
   "authorization_bearer": "Bearer\\s[a-zA-Z0-9_\\-\\.]+",
-
   "authorization_api": "(?:api|private)[_-]?key[_-]?(?:[0-9a-zA-Z]{32}|[0-9a-zA-Z]{16})",
-
   "mailgun_api_key": "key-[0-9a-zA-Z]{32}",
-
   "twilio_api_key": "SK[0-9a-fA-F]{32}",
-
   "paypal_braintree_access_token": "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}",
-
   "square_oauth_secret": "sq0csp-[0-9A-Za-z\\-_]{43}",
-
   "square_access_token": "sqOatp-[0-9A-Za-z\\-_]{22}",
-
   "stripe_standard_api": "(?:r|s)k_live_[0-9a-zA-Z]{24,99}",
-
   "stripe_restricted_api": "rk_live_[0-9a-zA-Z]{24,99}",
-
   "github_access_token": "(?:github|gh)[\\s_-]?(?:token|pat)[\\s_-]?[0-9a-zA-Z]{35,40}",
-
   "github_app_token": "ghu_[0-9a-zA-Z]{36}",
-
   "github_refresh_token": "ghr_[0-9a-zA-Z]{36}",
-
-  "rsa_private_key": "-----BEGIN(?:[\\s]+RSA)?[\\s]+PRIVATE[\\s]+KEY-----[\\s]*(?:[0-9A-Za-z+/\\s]*=[\\s]*)*",
-
-  "ssh_dsa_private_key": "-----BEGIN[\\s]+DSA[\\s]+PRIVATE[\\s]+KEY-----[\\s]*(?:[0-9A-Za-z+/\\s]*=[\\s]*)*",
-
-  "ssh_ec_private_key": "-----BEGIN[\\s]+EC[\\s]+PRIVATE[\\s]+KEY-----[\\s]*(?:[0-9A-Za-z+/\\s]*=[\\s]*)*",
-
-  "pgp_private_block": "-----BEGIN[\\s]+PGP[\\s]+PRIVATE[\\s]+KEY[\\s]+BLOCK-----[\\s]*(?:[0-9A-Za-z+/\\s]*=[\\s]*)*",
-
-  "json_web_token": "eyJ[A-Za-z0-9-_=]+\\.eyJ[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_.+/=]+",
-
-  "ssh_private_key": "-----BEGIN[\\s]+(?:RSA|DSA|EC|OPENSSH)?[\\s]+PRIVATE[\\s]+KEY[\\s]+(?:BLOCK)?-----[\\s]*(?:[0-9A-Za-z+/\\s]*=[\\s]*)*",
-
-  "kubernetes_config": "(?:(?:ya?ml|config|kube)(?:[-_.])?config)?[\\s]*:[\\s]*(?:[A-Za-z0-9+/]{64,})",
-
+  "rsa_private_key": "-----BEGIN(?:[\\s]+RSA)?[\\s]+PRIVATE[\\s]+KEY-----[\\s]*(?:[0-9A-Za-z+/[\\s]]*=*[\\s]*)*",
+  "ssh_dsa_private_key": "-----BEGIN[\\s]+DSA[\\s]+PRIVATE[\\s]+KEY-----[\\s]*(?:[0-9A-Za-z+/[\\s]]*=*[\\s]*)*",
+  "ssh_ec_private_key": "-----BEGIN[\\s]+EC[\\s]+PRIVATE[\\s]+KEY-----[\\s]*(?:[0-9A-Za-z+/[\\s]]*=*[\\s]*)*",
+  "pgp_private_block": "-----BEGIN[\\s]+PGP[\\s]+PRIVATE[\\s]+KEY[\\s]+BLOCK-----[\\s]*(?:[0-9A-Za-z+/[\\s]]*=*[\\s]*)*",
+  "json_web_token": "eyJ[A-Za-z0-9-_=]+\\.eyJ[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*$",
+  "ssh_private_key": "-----BEGIN[\\s]+(?:RSA|DSA|EC|OPENSSH)?[\\s]+PRIVATE[\\s]+KEY[\\s]+(?:BLOCK)?-----[\\s]*(?:[0-9A-Za-z+/[\\s]]*=*[\\s]*)*",
+  "kubernetes_config": "(?:(?:ya?ml|config|kube)(?:[-_.])?config)?[:\\s]+(?:[A-Za-z0-9+/]{64,})",
   "cloudinary_url": "cloudinary:[\\s]*//[0-9]{15}:[0-9A-Za-z-_]{35}@[a-z]{4,5}",
-
   "firebase_database_url": "(?:[\"]|['])?(?:https?://)?[\\w.-]+\\.firebaseio\\.com(?:[\"]|['])?",
-
   "telegram_bot_api": "[0-9]{8,10}:[a-zA-Z0-9_-]{35}",
-
   "aws_mws_key": "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
-
   "ip_address": "(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?![0-9])",
-
   "ssn": "\\b\\d{3}-\\d{2}-\\d{4}\\b",
-
   "passport_number": "\\b[A-PR-WY][1-9]\\d{5,8}\\b",
-
-  "email_address": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}",
-
+  "email_address": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.+[a-zA-Z]{2,}",
   "azure_client_secret": "(?i)(?:azure|microsoft)(?:[0-9A-Z]{24}|[0-9A-Z]{32})",
-
   "azure_connection_string": "DefaultEndpointsProtocol=https;AccountName=[a-z0-9]+;AccountKey=[A-Za-z0-9+/=]{88};EndpointSuffix=core\\.windows\\.net",
-
   "shopify_access_token": "shpat_[a-fA-F0-9]{32}",
-
   "shopify_custom_token": "shpca_[a-fA-F0-9]{32}",
-
   "shopify_token": "shp[a-zA-Z0-9]{32}|shppa_[a-fA-F0-9]{32}|shpca_[a-fA-F0-9]{32}",
-
   "shopify_shared_secret": "shpss_[a-fA-F0-9]{32}",
-
   "ethereum_address": "0x[a-fA-F0-9]{40}",
-
   "gitlab_pat": "glpat-[0-9a-zA-Z\\-]{20}",
-
   "amazon_aws_access_key_id": "AKIA[0-9A-Z]{16}",
-
   "amazonaws_url_2": "[a-zA-Z0-9-]{1,63}\\.s3\\.amazonaws\\.com|s3://[a-zA-Z0-9-]{1,63}",
-
   "linkedin_client_id": "(?i)(?:linkedin|linked-in)(?:[0-9a-z]{12})",
-
   "linkedin_secret_key": "(?i)(?:linkedin|linked-in)(?:[0-9a-z]{16})",
-
   "mailgun_private_key": "key-[0-9a-zA-Z]{32}",
-
   "firebase_fcm_token": "(?i)(?:firebase|fcm)(?:[0-9a-z]{139}|[0-9a-z]{153})",
-
   "firebase_fcm": "AAAA[a-zA-Z0-9_-]{7}:[a-zA-Z0-9_-]{140}",
-
   "generic_api_key": "[a|A][p|P][i|I][_]?[k|K][e|E][y|Y][_]?[a-zA-Z0-9]{16,64}",
-
   "generic_secret": "[s|S][e|E][c|C][r|R][e|E][t|T][_]?[k|K][e|E][y|Y][_]?[a-zA-Z0-9]{16,64}",
-
-  "artifactory_api_key": "AKC[a-zA-Z0-9]{10,}"
+  "artifactory_api_key": "AKC[a-zA-Z0-9]{10,}",
+  "aws_cognito_identity_id": "com\\.amplify\\.Cognito\\.[a-z0-9-]+\\.([a-zA-Z0-9]+)\\.identityId",
+  "authorization_basic_short": "Basic [A-Za-z0-9+/]{15}",
+  "slack_token_alternative": "(xox[p|b|o|a]-[0-9]{12}-[0-9]{12}-[0-9]{12}-[a-z0-9]{32})",
+  "slack_webhook_alternative": "https://hooks.slack.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{24}",
+  "facebook_token_generic": "[f|F][a|A][c|C][e|E][b|B][o|O][o|O][k|K].{0,30}['\"\\\\s][0-9a-f]{32}['\"\\\\s]",
+  "twitter_key_generic": "[t|T][w|W][i|I][t|T][t|T][e|E][r|R].{0,30}['\"\\\\s][0-9a-zA-Z]{35,44}['\"\\\\s]",
+  "heroku_api_generic": "[h|H][e|E][r|R][o|O][k|K][u|U].{0,30}[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}",
+  "mailchimp_api_alternative": "[0-9a-f]{32}-us[0-9]{1,2}",
+  "google_oauth_id_alternative": "[0-9(+-[0-9A-Za-z_]{32}.apps.qooqleusercontent.com",
+  "google_recaptcha_key": "6L[0-9A-Za-z-_]{38}",
+  "google_oauth_token": "ya29\\.[0-9A-Za-z\\-_]+",
+  "amazonaws_url_3": "s3\\.amazonaws.com[/]+|[a-zA-Z0-9_-]*\\.s3\\.amazonaws.com",
+  "facebook_access_token_alternative": "EAACEdEose0cBA[0-9A-Za-z]+",
+  "twilio_account_sid": "AC[a-zA-Z0-9_\\-]{32}",
+  "twilio_app_sid": "AP[a-zA-Z0-9_\\-]{32}",
+  "github_url_with_credentials": "[a-zA-Z0-9_-]*:[a-zA-Z0-9_\\-]+@github\\.com*",
+  "generic_private_key": "-----BEGIN PRIVATE KEY-----[a-zA-Z0-9\\S]{100,}-----END PRIVATE KEY-----",
+  "rsa_private_key_long": "-----BEGIN RSA PRIVATE KEY-----[a-zA-Z0-9\\S]{100,}-----END RSA PRIVATE KEY-----",
+  "sentry_api_key": "(?i)[\"']?sentry[_-]?key[\"']?[^\\S\r\n]*[=:][^\\S\r\n]*[\"']?[\\w-]+[\"']?",
+  "datadog_api_key": "(?i)[\"']?datadog[_-]?api[_-]?key[\"']?[^\\S\r\n]*[=:][^\\S\r\n]*[\"']?[\\w-]+[\"']?",
+  "digitalocean_access_token": "(?i)[\"']?digitalocean[_-]?access[_-]?token[\"']?[^\\S\r\n]*[=:][^\\S\r\n]*[\"']?[\\w-]+[\"']?",
+  "cloudflare_api_key": "(?i)[\"']?cloudflare[_-]?api[_-]?key[\"']?[^\\S\r\n]*[=:][^\\S\r\n]*[\"']?[\\w-]+[\"']?",
+  "new_relic_api_key": "(?i)[\"']?new[_-]?relic[_-]?beta[_-]?token[\"']?[^\\S\r\n]*[=:][^\\S\r\n]*[\"']?[\\w-]+[\"']?",
+  "sendgrid_api_key": "(?i)[\"']?sendgrid[_-]?api[_-]?key[\"']?[^\\S\r\n]*[=:][^\\S\r\n]*[\"']?[\\w-]+[\"']?",
+  "npm_token": "(?i)[\"']?npm[_-]?token[\"']?[^\\S\r\n]*[=:][^\\S\r\n]*[\"']?[\\w-]+[\"']?",
+  "AWS-long-lived-token": "AKIA[0-9A-Z]{16}",
+  "AWS-short-lived-token": "ASIA[0-9A-Z]{16}",
+  "Algolia": "(?i)algolia.{0,20}(?:key|secret|token)['\"\\s:=]+([a-z0-9]{32})",
+  "Autopilot": "(?i)autopilot.{0,20}(?:key|secret|token)['\"\\s:=]+([a-z0-9]{32})",
+  "Bitbucket": "(?i)bitbucket.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9]{20,})",
+  "Bitly": "(?i)bitly.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9]{32})",
+  "Buildkite": "(?i)buildkite.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9]{40})",
+  "CircleCI": "(?i)circle-token=[a-z0-9]{40}",
+  "Clearbit": "(?i)clearbit.{0,20}(?:key|secret|token)['\"\\s:=]+(sk_[a-zA-Z0-9]{32})",
+  "Clerk": "(?i)clerk.{0,20}(?:key|secret|token)['\"\\s:=]+(sk_live_[a-zA-Z0-9]{40})",
+  "DigitalOcean": "(?i)digitalocean.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9]{64})",
+  "Doppler": "dp\\.pt\\.[a-zA-Z0-9]{43}",
+  "Eventbrite": "(?i)eventbrite.{0,20}(?:key|secret|token)['\"\\s:=]+([A-Z0-9]{24})",
+  "EvolutionAPI": "(?i)evolutionapi.{0,20}(?:key|secret|token)['\"\\s:=]+([a-fA-F0-9\\-]{36})",
+  "GCP": "AIza[0-9A-Za-z\\-_]{35}",
+  "GetResponse": "(?i)getresponse.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9_\\-]{25})",
+  "Github": "ghp_[a-zA-Z0-9]{36}",
+  "Gitlab": "glpat-[0-9a-zA-Z\\-]{20}",
+  "Helpscout": "(?i)helpscout.{0,20}(?:key|secret|token)['\"\\s:=]+([a-f0-9]{40})",
+  "Honeycomb": "(?i)honeycomb.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9]{32})",
+  "HubSpot": "(?i)hubspot.{0,20}(?:key|secret|token)['\"\\s:=]+([a-fA-F0-9\\-]{36})",
+  "HuggingFace": "hf_[a-zA-Z0-9]{35}",
+  "Jfrog": "(?i)jfrog.{0,20}(?:key|secret|token|password)['\"\\s:=]+([a-zA-Z0-9]{20,})",
+  "Jira": "(?i)jira.{0,20}(?:key|secret|token|password)['\"\\s:=]+([a-zA-Z0-9_\\-]{20,})",
+  "Klaviyo": "(?i)klaviyo.{0,20}(?:key|secret|token)['\"\\s:=]+(pk_[a-zA-Z0-9]{32})",
+  "LaunchDarkly": "(?i)launchdarkly.{0,20}(?:key|secret|token)['\"\\s:=]+(api-[a-f0-9]{32})",
+  "MadKudu": "(?i)madkudu.{0,20}(?:key|secret|token)['\"\\s:=]+(mk-[a-zA-Z0-9\\-]{36})",
+  "MailChimp": "[0-9a-f]{32}-us[0-9]{1,2}",
+  "MailerLite": "(?i)mailerlite.{0,20}(?:key|secret|token)['\"\\s:=]+([a-f0-9]{64})",
+  "Mailgun": "key-[0-9a-zA-Z]{32}",
+  "MongoDB": "mongodb(?:\\+srv)?://[\\w\\.\\-]+:[\\w\\.\\-]+@[\\w\\.\\-]+",
+  "NVIDIA": "nvapi-[a-zA-Z0-9\\-]{64}",
+  "Notion": "(?i)notion.{0,20}(?:key|secret|token)['\"\\s:=]+(secret_[a-zA-Z0-9]{43})",
+  "NpmToken": "npm_[a-zA-Z0-9]{36}",
+  "Okta": "(?i)okta.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9\\-]{42})",
+  "Omnisend": "(?i)omnisend.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9\\-]{36})",
+  "OpenAI": "sk-[a-zA-Z0-9]{48}",
+  "Opsgenie": "(?i)opsgenie.{0,20}(?:key|secret|token)['\"\\s:=]+([a-fA-F0-9\\-]{36})",
+  "Pandadoc": "(?i)pandadoc.{0,20}(?:key|secret|token)['\"\\s:=]+([a-f0-9]{32})",
+  "Paypal": "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}",
+  "Paystack": "(?i)paystack.{0,20}(?:key|secret|token)['\"\\s:=]+((?:sk|pk)_(?:test|live)_[a-zA-Z0-9]{30,})",
+  "Pipedrive": "(?i)pipedrive.{0,20}(?:key|secret|token|api_token)['\"\\s:=]+([a-f0-9]{40})",
+  "Postgres": "postgres(?:ql)?://[\\w\\.\\-]+:[\\w\\.\\-]+@[\\w\\.\\-]+/[\\w\\.\\-]+",
+  "Posthog": "(?i)posthog.{0,20}(?:key|secret|token)['\"\\s:=]+(phx_[a-zA-Z0-9]{47})",
+  "Postman": "PMAK-[a-f0-9]{24}-[a-f0-9]{34}",
+  "Postmark": "(?i)postmark.{0,20}(?:key|secret|token)['\"\\s:=]+([a-fA-F0-9\\-]{36})",
+  "Pulumi": "pul-[a-f0-9]{40}",
+  "PushBullet": "(?i)pushbullet.{0,20}(?:key|secret|token)['\"\\s:=]+(o\\.[a-zA-Z0-9]{32})",
+  "RabbitMQ": "amqp://[\\w\\.\\-]+:[\\w\\.\\-]+@[\\w\\.\\-]+",
+  "RazorPay": "(?i)razorpay.{0,20}(?:key|secret)['\"\\s:=]+((?:rzp)_(?:test|live)_[a-zA-Z0-9]{20,})",
+  "RechargePayments": "(?i)recharge.{0,20}(?:key|secret|token)['\"\\s:=]+(sk_[a-zA-Z0-9]{32})",
+  "SendGrid": "SG\\.[a-zA-Z0-9_\\-]{22}\\.[a-zA-Z0-9_\\-]{43}",
+  "SendInBlue": "(?i)sendinblue.{0,20}(?:key|secret|token)['\"\\s:=]+(xkeysib-[a-f0-9]{64}-[a-zA-Z0-9]{16})",
+  "Sentry": "(?i)sentry.{0,20}(?:key|secret|token)['\"\\s:=]+([a-f0-9]{32})",
+  "Shodan": "(?i)shodan.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9]{32})",
+  "Shopify": "shpat_[a-fA-F0-9]{32}",
+  "Slack": "xox(?:a|b|p|o|r|s)-(?:[0-9]{10,12})-(?:[0-9]{10,12})-(?:[0-9]{10,12})-(?:[a-f0-9]{32})",
+  "Snyk": "(?i)snyk.{0,20}(?:key|secret|token)['\"\\s:=]+([a-fA-F0-9\\-]{36})",
+  "SonarCloud": "(?i)sonar.{0,20}(?:key|secret|token)['\"\\s:=]+([a-f0-9]{40})",
+  "SquareAccessToken": "sq0atp-[0-9A-Za-z\\-_]{22}",
+  "Stripe": "(?:r|s)k_live_[0-9a-zA-Z]{24,99}",
+  "Telegram": "[0-9]{8,10}:[a-zA-Z0-9_-]{35}",
+  "Telnyx": "(?i)telnyx.{0,20}(?:key|secret|token)['\"\\s:=]+(KEY[a-zA-Z0-9\\-]{32})",
+  "Terraform": "\\.terraformrc[\\s\\S]*token[\\s_]*=[\\s_]*\\\"([a-zA-Z0-9]+)\\.atlasv1\\.([a-zA-Z0-9\\-=_]+)\\\"",
+  "Trello": "(?i)trello.{0,20}(?:key|secret|token)['\"\\s:=]+([a-f0-9]{32})",
+  "Twilio": "SK[0-9a-fA-F]{32}",
+  "Twitter": "[t|T][w|W][i|I][t|T][t|T][e|E][r|R].{0,30}['\"\\s][0-9a-zA-Z]{35,44}['\"\\s]",
+  "Typeform": "(?i)typeform.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9]{32})",
+  "Vercel": "(?i)vercel.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9]{24})",
+  "WeightsAndBiases": "(?i)wandb.{0,20}(?:key|secret|token|api_key)['\"\\s:=]+([a-f0-9]{40})",
+  "YouSign": "(?i)yousign.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9\\/+=]{40})",
+  "Zendesk": "(?i)zendesk.{0,20}(?:key|secret|token)['\"\\s:=]+([a-zA-Z0-9]{40})"
 }
