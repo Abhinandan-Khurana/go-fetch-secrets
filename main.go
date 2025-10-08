@@ -162,7 +162,7 @@ func printBanner() {
     ╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚════╝░
 
 
-    🔍 Go-Fetch-Secrets v1.0 - The Advanced Secret Scanner 🔍
+    🔍 Go-Fetch-Secrets v1.2 - The Advanced Secret Scanner 🔍
     `
 	color.New(color.FgCyan, color.Bold).Println(banner)
 }
